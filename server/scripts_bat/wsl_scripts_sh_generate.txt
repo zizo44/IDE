@@ -1,0 +1,32 @@
+cd
+mkdir scripts_sh
+cd scripts_sh
+
+cat > wsl_user_add.sh <<- "EOF"
+#!/bin/bash
+useradd -m $1
+echo -e "$2\n$2\n" | sudo passwd $1
+chmod 750 /home/*
+EOF
+
+cat > wsl_user_file_delete.sh <<- "EOF"
+#!/bin/bash
+su -c "cd;rm $2" - $1
+EOF
+
+cat > wsl_user_run.sh <<- "EOF"
+#!/bin/bash
+su -c "cd;$2" - $1
+EOF
+
+cat > wsl_user_file_write.sh <<- "EOF2"
+#!/bin/bash
+su -c "cd;cat > $2 <<- "EOF"
+$3
+EOF" - $1
+EOF2
+
+cat > wsl_user_remove.sh <<- "EOF"
+#!/bin/bash
+userdel -f -r $1
+EOF

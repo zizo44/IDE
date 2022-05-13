@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  color: white;
+}
+
+.textArea {
+  background-color: #30343d;
+  color: white;
+}
+
+.button {
+  background-color: #1b3d81;
+  color: rgb(199, 251, 255);
+}

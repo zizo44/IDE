@@ -1,0 +1,1 @@
+wsl cd;cd scripts_sh;bash wsl_user_file_write.sh %1 %2 %3

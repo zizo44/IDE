@@ -1,0 +1,1 @@
+wsl cd;cd scripts_sh;bash wsl_user_run.sh %1 %2%
